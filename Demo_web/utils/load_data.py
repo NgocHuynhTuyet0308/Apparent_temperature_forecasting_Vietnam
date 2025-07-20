@@ -6,12 +6,12 @@ import pandas as pd
 
 
 @st.cache_data
-def load_all_csv(folder_path):
+def load_all_csv(folder_path, replace_text):
     csv_files = glob.glob(os.path.join(folder_path, "*.csv"))
 
     dfs = dict()
     for file in csv_files:
-        name = os.path.basename(file).replace("_Final.csv", "")
+        name = os.path.basename(file).replace(replace_text, "")
         dfs[name] = pd.read_csv(file)
 
     return dfs

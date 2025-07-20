@@ -9,7 +9,7 @@ stations = [
         "Vinh", "Phu Bai", "Quy Nhon",
         "TPHCM", "Ca Mau"
     ]
-data_dict = load_all_csv(RAW_DATA_FOLDER_PATH)
+data_dict = load_all_csv(RAW_DATA_FOLDER_PATH, '_Final.csv')
 available_stations = list(data_dict.keys())
 station_order = [s for s in stations if s in available_stations]
 

@@ -12,7 +12,7 @@ stations = [
     ]
 
 
-data_dict = load_all_csv(RAW_DATA_FOLDER_PATH)
+data_dict = load_all_csv(RAW_DATA_FOLDER_PATH, '_Final.csv')
 available_stations = list(data_dict.keys())
 station_order = [s for s in stations if s in available_stations]
 
@@ -61,6 +61,22 @@ st.pydeck_chart(pdk.Deck(
     initial_view_state=view_state,
     tooltip={"text": "Station: {Station} ({Location})"}
 ))
+
+
+# Feature description
+st.subheader('Feature Description')
+st.markdown("""
+- **YEAR, MONTH, DAY**: Time indicators for each observation  
+- **LATITUDE**: North–South geographic position (degrees)  
+- **LONGITUDE**: East–West geographic position (degrees)
+- **TMP_2**: Air temperature at 2 meters height (°C)  
+- **DEW_2**: Dew point temperature at 2 meters height (°C)  
+- **RH**: Relative humidity (%)  
+- **AT_mean**: Daily mean apparent temperature (°C)  
+- **AT_max**: Daily maximum apparent temperature (°C)
+""")
+
+
 
 # Raw dataframe
 st.subheader('Meteorological Raw Data')
