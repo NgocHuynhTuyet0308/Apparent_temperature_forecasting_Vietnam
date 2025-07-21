@@ -3,7 +3,7 @@ from utils.load_data import load_excel, load_csv, load_all_csv
 import pandas as pd
 import plotly.graph_objects as go
 
-PREPROCESSED_DATA_FOLDER_PATH = 'static/DATA_AT_FilteredDate/'
+PREPROCESSED_DATA_FOLDER_PATH = 'Demo_web/static/Data_AT_FilteredDate/'
 data_dict = load_all_csv(PREPROCESSED_DATA_FOLDER_PATH, '_FilteredDate.csv')
 data = {
     'AT mean': {
@@ -102,20 +102,20 @@ marker_dict = {
 
 compare_data = {
     'AT mean': {
-        'LSTM': load_excel('static/Result_csv/LSTM/Result_LSTM_ATmean.xlxs'),
-        'BiLSTM': load_excel('static/Result_csv/BiLSTM/Result_BiLSTM_ATmean.xlsx'),
-        'GCN - LSTM': load_csv('static/Result_csv/GCN_LSTM_baseline/Result_GCN_LSTM_baseline_1_ATmean_new.csv'),
-        'GCN - BiLSTM': load_csv('static/Result_csv/GCN_BiLSTM_baseline/Result_GCN_BiLSTM_baseline_1_ATmean_new.csv'),
-        'The proposed model with LSTM': load_csv('static/Result_csv/GCN_LSTM_Attention/Result_GCN_LSTM_Attention_1_ATmean_new.csv'),
-        'The proposed model with BiLSTM': load_csv('static/Result_csv/GCN_BiLSTM_Attention/Result_GCN_BiLSTM_Attention_1_ATmean_new.csv'),
+        'LSTM': load_excel('Demo_web/static/Result_csv/LSTM/Result_LSTM_ATmean.xlxs'),
+        'BiLSTM': load_excel('Demo_web/static/Result_csv/BiLSTM/Result_BiLSTM_ATmean.xlsx'),
+        'GCN - LSTM': load_csv('Demo_web/static/Result_csv/GCN_LSTM_baseline/Result_GCN_LSTM_baseline_1_ATmean_new.csv'),
+        'GCN - BiLSTM': load_csv('Demo_web/static/Result_csv/GCN_BiLSTM_baseline/Result_GCN_BiLSTM_baseline_1_ATmean_new.csv'),
+        'The proposed model with LSTM': load_csv('Demo_web/static/Result_csv/GCN_LSTM_Attention/Result_GCN_LSTM_Attention_1_ATmean_new.csv'),
+        'The proposed model with BiLSTM': load_csv('Demo_web/static/Result_csv/GCN_BiLSTM_Attention/Result_GCN_BiLSTM_Attention_1_ATmean_new.csv'),
     },
     'AT max': {
-        'LSTM': load_excel('static/Result_csv/LSTM/Result_LSTM_ATmax.xlxs'),
-        'BiLSTM': load_excel('static/Result_csv/BiLSTM/Result_BiLSTM_ATmax.xlsx'),
-        'GCN - LSTM': load_csv('static/Result_csv/GCN_LSTM_baseline/Result_GCN_LSTM_baseline_1_ATmax_new.csv'),
-        'GCN - BiLSTM': load_csv('static/Result_csv/GCN_BiLSTM_baseline/Result_GCN_BiLSTM_baseline_1_ATmax_new.csv'),
-        'The proposed model with LSTM': load_csv('static/Result_csv/GCN_LSTM_Attention/Result_GCN_LSTM_Attention_1_ATmax_new.csv'),
-        'The proposed model with BiLSTM': load_csv('static/Result_csv/GCN_BiLSTM_Attention/Result_GCN_BiLSTM_Attention_1_ATmax_new.csv'),
+        'LSTM': load_excel('Demo_web/static/Result_csv/LSTM/Result_LSTM_ATmax.xlxs'),
+        'BiLSTM': load_excel('Demo_web/static/Result_csv/BiLSTM/Result_BiLSTM_ATmax.xlsx'),
+        'GCN - LSTM': load_csv('Demo_web/static/Result_csv/GCN_LSTM_baseline/Result_GCN_LSTM_baseline_1_ATmax_new.csv'),
+        'GCN - BiLSTM': load_csv('Demo_web/static/Result_csv/GCN_BiLSTM_baseline/Result_GCN_BiLSTM_baseline_1_ATmax_new.csv'),
+        'The proposed model with LSTM': load_csv('Demo_web/static/Result_csv/GCN_LSTM_Attention/Result_GCN_LSTM_Attention_1_ATmax_new.csv'),
+        'The proposed model with BiLSTM': load_csv('Demo_web/static/Result_csv/GCN_BiLSTM_Attention/Result_GCN_BiLSTM_Attention_1_ATmax_new.csv'),
     }
 }
 
