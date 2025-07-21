@@ -199,8 +199,6 @@ def plot_heatmap(data_dict, feature):
 # Dashboard spatial
 col1, col2 = st.columns(2)
 with col1:
-    plot_heatmap(data_dict, feature)
-with col2:
     st.write('\n')
     st.write('\n')
     st.markdown('**Effect of latitude on apparent temperature among stations**')
@@ -208,6 +206,9 @@ with col2:
         st.image('static/ATmean_map.png', use_container_width=True)
     elif feature == 'AT max':
         st.image('static/ATmax_map.png', use_container_width=True)
+    
+with col2:
+    plot_heatmap(data_dict, feature)
 
 # Dashboard temporal
 col3, col4 = st.columns(2)

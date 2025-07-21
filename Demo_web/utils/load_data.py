@@ -16,4 +16,14 @@ def load_all_csv(folder_path, replace_text):
 
     return dfs
 
+@st.cache_data
+def load_excel(excel_file_path):
+    df = pd.read_excel(excel_file_path)
+    return df
+
+@st.cache_data
+def load_csv(csv_file_path):
+    df = pd.read_csv(csv_file_path)
+    return df
+
 
