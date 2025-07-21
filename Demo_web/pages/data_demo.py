@@ -16,8 +16,6 @@ data_dict = load_all_csv(RAW_DATA_FOLDER_PATH, '_Final.csv')
 available_stations = list(data_dict.keys())
 station_order = [s for s in stations if s in available_stations]
 
-st.write(data_dict)
-
 # Description of raw data page
 st.title('Raw Data of Apparent Temperature Across Stations')
 

@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.graph_objects as go
 
 PREPROCESSED_DATA_FOLDER_PATH = 'static/DATA_AT_FilteredDate/'
-RAW_DATA_FOLDER_PATH = '../DATA_SENT SV/'
+RAW_DATA_FOLDER_PATH = 'static/DATA_SENT_SV/'
 stations = [
         "Noi Bai", "Lang Son", "Lao Cai",
         "Vinh", "Phu Bai", "Quy Nhon",
