@@ -7,7 +7,7 @@ import base64
 from PIL import Image
 import io
 
-PREPROCESSED_DATA_FOLDER_PATH = '../DATA_AT_FilteredDate/'
+PREPROCESSED_DATA_FOLDER_PATH = 'static/DATA_AT_FilteredDate/'
 stations = [
         "Noi Bai", "Lang Son", "Lao Cai",
         "Vinh", "Phu Bai", "Quy Nhon",

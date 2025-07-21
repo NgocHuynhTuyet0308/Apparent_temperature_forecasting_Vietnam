@@ -4,7 +4,7 @@ import pandas as pd
 import pydeck as pdk
 
 
-RAW_DATA_FOLDER_PATH = '../DATA_SENT SV/'
+RAW_DATA_FOLDER_PATH = 'static/DATA_SENT_SV/'
 stations = [
         "Noi Bai", "Lang Son", "Lao Cai",
         "Vinh", "Phu Bai", "Quy Nhon",
@@ -15,6 +15,8 @@ stations = [
 data_dict = load_all_csv(RAW_DATA_FOLDER_PATH, '_Final.csv')
 available_stations = list(data_dict.keys())
 station_order = [s for s in stations if s in available_stations]
+
+st.write(data_dict)
 
 # Description of raw data page
 st.title('Raw Data of Apparent Temperature Across Stations')
@@ -80,6 +82,6 @@ st.markdown("""
 
 # Raw dataframe
 st.subheader('Meteorological Raw Data')
-option = st.selectbox("Choose stations", station_order)
+option = st.selectbox("Choose stations", station_order, index=0)
 df = data_dict[option]
 st.dataframe(df)

@@ -3,7 +3,7 @@ from utils.load_data import load_all_csv
 import io
 import pandas as pd
 
-RAW_DATA_FOLDER_PATH = '../DATA_SENT SV/'
+RAW_DATA_FOLDER_PATH = 'static/DATA_SENT SV/'
 stations = [
         "Noi Bai", "Lang Son", "Lao Cai",
         "Vinh", "Phu Bai", "Quy Nhon",
