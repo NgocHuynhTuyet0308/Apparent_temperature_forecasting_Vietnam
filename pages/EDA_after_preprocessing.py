@@ -3,8 +3,8 @@ from utils.load_data import load_all_csv
 import pandas as pd
 import plotly.graph_objects as go
 
-PREPROCESSED_DATA_FOLDER_PATH = 'static\Data_AT_FilteredDate'
-RAW_DATA_FOLDER_PATH = 'static\DATA_SENT_SV'
+PREPROCESSED_DATA_FOLDER_PATH = 'static/Data_AT_FilteredDate/'
+RAW_DATA_FOLDER_PATH = 'static/DATA_SENT_SV/'
 stations = [
         "Noi Bai", "Lang Son", "Lao Cai",
         "Vinh", "Phu Bai", "Quy Nhon",

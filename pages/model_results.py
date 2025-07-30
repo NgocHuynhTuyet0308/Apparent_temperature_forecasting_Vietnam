@@ -3,7 +3,7 @@ from utils.load_data import load_excel, load_csv, load_all_csv
 import pandas as pd
 import plotly.graph_objects as go
 
-PREPROCESSED_DATA_FOLDER_PATH = 'static\Data_AT_FilteredDate'
+PREPROCESSED_DATA_FOLDER_PATH = 'static/Data_AT_FilteredDate/'
 data_dict = load_all_csv(PREPROCESSED_DATA_FOLDER_PATH, '_FilteredDate.csv')
 data = {
     'AT mean': {
