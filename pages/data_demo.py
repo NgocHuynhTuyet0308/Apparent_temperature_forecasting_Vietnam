@@ -4,7 +4,7 @@ import pandas as pd
 import pydeck as pdk
 
 
-RAW_DATA_FOLDER_PATH = 'Demo_web/static/DATA_SENT_SV/'
+RAW_DATA_FOLDER_PATH = 'static\DATA_SENT_SV'
 stations = [
         "Noi Bai", "Lang Son", "Lao Cai",
         "Vinh", "Phu Bai", "Quy Nhon",
@@ -17,8 +17,13 @@ available_stations = list(data_dict.keys())
 station_order = [s for s in stations if s in available_stations]
 
 # Description of raw data page
-st.title('Raw Data of Apparent Temperature Across Stations')
+st.title('Project: Apparent temperature forecasting in Vietnam across 8 stations')
+st.write('**Source code is available on [GitHub](https://github.com/NgocHuynhTuyet0308/Apparent_temperature_forecasting_Vietnam).**')
 
+st.subheader('Introduction')
+st.write('In recent years, Vietnam has been experiencing an alarming increase in heatwaves and severe cold spells that persist for several consecutive days. These extreme events are matters of concern as they affect human health through apparent temperature – an indication that reflects the degree to which the human body actually feels hot or cold, under the combined influence of factors such as air temperature, dew point and wind speed. This project focuses on improving accuracy in apparent temperature forecasting in Vietnam by exploiting spatio – temporal relationships in meteorological dataset. Specifically, we propose a hybrid model which combines customized Graph Convolutional Network (GCN) with variants of Long short – term memory (LSTM), along with the Attention mechanism. This proposed method includes two phases: data preprocessing as input to the model and model development. In the data preprocessing phase, the datasets are normalized, transformed into a time series format using the sliding window technique. The model development phase primarily focuses on the model architecture and its training process, along with the optimization of its hyperparameters. This study trains and evaluates the proposed model based on apparent temperature dataset which was collected from 8 meteorological stations representing different regions across Vietnam between 1992 and 2024. The efficiency of the proposed model is compared with traditional methods, such as LSTM variants that focus on temporal features, as well as simple models that capture spatio-temporal relationships. Experimental results demonstrate that the proposed method significantly outperforms baseline models in forecasting apparent temperature across all stations in the three main regions of Vietnam, achieving a coefficient of determination (R²) of approximately 93 – 99% for forecasting the mean apparent temperature and 90 – 98% for forecasting the maximum apparent temperature at a single time step.')
+
+st.subheader('Dataset of this project')
 st.write('The dataset used in this study was collected from the Meteostat Developers API '
 '(https://dev.meteostat.net/), which compiles datasets from worldwide meteorological stations, ' \
 'mostly derived from trustworthy governmental agencies like the National Oceanic and Atmospheric Administration (NOAA), ' \

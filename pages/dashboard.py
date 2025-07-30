@@ -7,7 +7,7 @@ import base64
 from PIL import Image
 import io
 
-PREPROCESSED_DATA_FOLDER_PATH = 'Demo_web/static/Data_AT_FilteredDate/'
+PREPROCESSED_DATA_FOLDER_PATH = 'static\Data_AT_FilteredDate'
 stations = [
         "Noi Bai", "Lang Son", "Lao Cai",
         "Vinh", "Phu Bai", "Quy Nhon",
@@ -203,9 +203,9 @@ with col1:
     st.write('\n')
     st.markdown('**Effect of latitude on apparent temperature among stations**')
     if feature == 'AT mean':
-        st.image('Demo_web/static/ATmean_map.png', use_container_width=True)
+        st.image('static\ATmean_map.png', use_container_width=True)
     elif feature == 'AT max':
-        st.image('Demo_web/static/ATmax_map.png', use_container_width=True)
+        st.image('static\ATmax_map.png', use_container_width=True)
     
 with col2:
     plot_heatmap(data_dict, feature)
